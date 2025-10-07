@@ -11,7 +11,7 @@ const Create = () => {
     e.preventDefault();
     const blog = { title, body, author };
 
-    fetch('https://json-server-m143.onrender.com/', {
+    fetch('https://json-server-m143.onrender.com/blogs', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog)
