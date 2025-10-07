@@ -1,0 +1,203 @@
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #f1de35;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1de35;
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.blog-preview h2 {
+  font-size: 20px;
+  color: #f1de35;
+  margin-bottom: 8px;
+}
+.blog-preview a{
+  text-decoration: none;
+}
+
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #f1de35;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #f1de35;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+:root {
+  --primary: #f1de35;
+  --secondary: #000000;
+}
+
+* {
+  color: #000000;
+  margin: 0;
+}
+
+/* help layout */
+.help-layout nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+.help-layout nav a{
+  padding: 10px;
+  border: 2px solid #f1de35;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.help-layout nav a:hover{
+  border-color: var(--primary);
+}
+.help-layout nav a.active {
+  background: var(--primary);
+}
+
+/* faq */
+.faq .question {
+  background: #f1de35;
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* contact form */
+form {
+  margin-top: 30px;
+}
+form input, form label span, form textarea {
+  display: block;
+}
+form input, form textarea {
+  margin-bottom: 30px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px solid #000000;
+  width: 300px;
+  color: var(--secondary);
+}
+form label span {
+  margin-bottom: 10px;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+/* App.css */
+
+.navbar.dark {
+  background: #333;
+  color: #fff;
+}
+
+.theme-btn {
+  margin-left: 15px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* App 整體樣式 */
+.App.light {
+  background: #fafafa;
+  color: #222;
+  min-height: 100vh; 
+}
+
+.App.dark {
+  background: #333;
+  color: #ddd;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 20px;
+}
+
+
+.App.dark .navbar a {
+  color: #fff;
+}
+
+.App.dark .navbar a:hover {
+  color: #f1de35; 
+}
+
+.App.dark .blog-preview p {
+  color: #fafafa;
+}
+
+.App.dark .blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.5)
+}
+
+.App.dark .blog-details h2 {
+  color: #fafafa;
+}
+
+.App.dark .blog-details p {
+  color: #fafafa;
+}
+
+.App.dark .blog-body  {
+  color: #fafafa;
+}
