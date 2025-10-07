@@ -5,11 +5,11 @@ import { MdDelete } from "react-icons/md";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { data: blog, error, isLoading } = useFetch('http://localhost:8000/blogs/' + id);
+  const { data: blog, error, isLoading } = useFetch('https://json-server-m143.onrender.com/blogs' + id);
   const nevigate = useNavigate();
 
    const handleClick = () => {
-    fetch('http://localhost:8000/blogs/' + blog.id, {
+    fetch('https://json-server-m143.onrender.com/blogs' + blog.id, {
       method: 'DELETE'
     }).then(() => {
       nevigate("/");
