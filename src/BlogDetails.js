@@ -6,36 +6,40 @@ import { MdDelete } from "react-icons/md";
 const BlogDetails = () => {
   const { id } = useParams();
 
-  const apiUrl = id 
-        ? `https://json-server-m143.onrender.com/blogs/${id}` 
-        : null; 
+  const apiUrl = id
+    ? `https://json-server-m143.onrender.com/blogs/${id}`
+    : null;
+
+  console.log("最終檢查的 API URL:", apiUrl);
 
   const { data: blog, error, isLoading } = useFetch(apiUrl);
   const nevigate = useNavigate();
 
-   const handleClick = () => {
+  const handleClick = () => {
     fetch(`https://json-server-m143.onrender.com/blogs/${blog.id}`, {
-      method: 'DELETE'
+      method: "DELETE",
     }).then(() => {
       nevigate("/");
-    })
-  }
+    });
+  };
 
   return (
     <div className="blog-details">
-      { isLoading  && <div>資料載入中...</div> }
-      { error && <div>{ error }</div> }
-      { blog && (
+      {isLoading && <div>資料載入中...</div>}
+      {error && <div>{error}</div>}
+      {blog && (
         <article>
-          <h2>{ blog.title }</h2>
-          <p>Written by { blog.author }</p>
-          <div className="blog-body">{ blog.body }</div>
-       <button onClick={handleClick}> <MdDelete size={20} style={{ fill: "red" }} /></button>
-
+          <h2>{blog.title}</h2>
+          <p>Written by {blog.author}</p>
+          <div className="blog-body">{blog.body}</div>
+          <button onClick={handleClick}>
+            {" "}
+            <MdDelete size={20} style={{ fill: "red" }} />
+          </button>
         </article>
       )}
     </div>
   );
- }
+};
 
 export default BlogDetails;
