@@ -10,11 +10,11 @@ const BlogDetails = () => {
         ? `https://json-server-m143.onrender.com/blogs/${id}` 
         : null; 
 
-  const { data: blog, error, isLoading } = useFetch('https://json-server-m143.onrender.com/blogs/${id}');
+  const { data: blog, error, isLoading } = useFetch(apiUrl);
   const nevigate = useNavigate();
 
    const handleClick = () => {
-    fetch('https://json-server-m143.onrender.com/blogs/${blog.id}', {
+    fetch(`https://json-server-m143.onrender.com/blogs/${blog.id}`, {
       method: 'DELETE'
     }).then(() => {
       nevigate("/");
@@ -23,7 +23,7 @@ const BlogDetails = () => {
 
   return (
     <div className="blog-details">
-      { isLoading || !apiUrl && <div>資料載入中...</div> }
+      { isLoading  && <div>資料載入中...</div> }
       { error && <div>{ error }</div> }
       { blog && (
         <article>
